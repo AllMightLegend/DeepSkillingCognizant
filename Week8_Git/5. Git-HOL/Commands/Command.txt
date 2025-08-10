@@ -1,0 +1,39 @@
+PS C:\Users\Srinjoy\Downloads\GitDemo> git checkout master
+Already on 'master'
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+PS C:\Users\Srinjoy\Downloads\GitDemo> git status
+On branch master
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\Srinjoy\Downloads\GitDemo> git branch -a
+  GitWork
+* master
+  remotes/origin/master
+PS C:\Users\Srinjoy\Downloads\GitDemo> git pull origin master
+From https://github.com/AllMightLegend/GitDemo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+PS C:\Users\Srinjoy\Downloads\GitDemo> echo "Now Content" > New.txt
+PS C:\Users\Srinjoy\Downloads\GitDemo> git add New.txt
+The following paths are ignored by one of your .gitignore files:
+New.txt
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+PS C:\Users\Srinjoy\Downloads\GitDemo> git add -f New.txt
+PS C:\Users\Srinjoy\Downloads\GitDemo> git commit -m "Add New.txt"
+[master dcfb8a6] Add New.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 New.txt
+PS C:\Users\Srinjoy\Downloads\GitDemo> git push origin master
+Enumerating objects: 25, done.
+Counting objects: 100% (25/25), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects: 100% (23/23), 2.36 KiB | 482.00 KiB/s, done.
+Total 23 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), done.
+To https://github.com/AllMightLegend/GitDemo.git
+   cbc39c4..dcfb8a6  master -> master
